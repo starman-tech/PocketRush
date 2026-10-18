@@ -4,13 +4,19 @@
 
 🇬🇧 [English version](README.md)
 
-| Taranis X9D+ (212×64, niveaux de gris) | Écran couleur (480×272) |
+| Sur une vraie Taranis X9D+ 2019 | |
+|---|---|
+| ![Départ](images/radio_depart.png) | ![Porte vue d'en haut](images/radio_porte.png) |
+| ![Approche d'une porte](images/radio_approche.png) | ![Virage à 40 km/h](images/radio_virage.png) |
+
+*Vraies captures d'écran de la radio, en vol en mode Acro.*
+
+| Menu et avion (212×64) | Écran couleur (480×272) |
 |---|---|
 | ![Menu](images/bw_menu.png) | ![Drone](images/color_drone.png) |
-| ![Drone](images/bw_drone.png) | ![Avion](images/color_plane.png) |
-| ![Avion](images/bw_plane.png) | ![Menu](images/color_menu.png) |
+| ![Avion](images/bw_plane.png) | ![Avion](images/color_plane.png) |
 
-*Captures du banc d'essai sur PC. Sur une vraie radio, les polices sont plus petites.*
+*Rendus du banc d'essai sur PC. Sur une vraie radio, les polices sont plus petites.*
 
 ## Fonctionnalités
 
@@ -91,7 +97,9 @@ Si tu désarmes en l'air, les moteurs s'arrêtent et l'appareil tombe, comme en 
 
 ## Contribuer
 
-Les bugs, les idées, ainsi que les vidéos et photos sur de vraies radios sont les bienvenus dans les [issues](../../issues). Les pull requests aussi.
+Les bugs, les idées, ainsi que les vidéos et captures sur de vraies radios sont les bienvenus dans les [issues](../../issues). Les pull requests aussi.
+
+Pour faire une capture d'écran : dans **MDL**, page **Fonctions spéciales**, mets **Capture d'écran** sur un interrupteur libre. Chaque bascule enregistre une image dans le dossier `SCREENSHOTS` de la carte SD.
 
 ## Licence
 

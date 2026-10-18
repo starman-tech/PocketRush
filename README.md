@@ -4,13 +4,19 @@
 
 🇫🇷 [Version française](README.fr.md)
 
-| Taranis X9D+ (212×64, greyscale) | Color screen (480×272) |
+| On a real Taranis X9D+ 2019 | |
+|---|---|
+| ![Start](images/radio_depart.png) | ![Gate seen from above](images/radio_porte.png) |
+| ![Gate approach](images/radio_approche.png) | ![Turn at 40 km/h](images/radio_virage.png) |
+
+*Real screenshots taken on the radio, flying in Acro mode.*
+
+| Menu and plane (212×64) | Color screen (480×272) |
 |---|---|
 | ![Menu](images/bw_menu.png) | ![Quad](images/color_drone.png) |
-| ![Quad](images/bw_drone.png) | ![Plane](images/color_plane.png) |
-| ![Plane](images/bw_plane.png) | ![Menu](images/color_menu.png) |
+| ![Plane](images/bw_plane.png) | ![Plane](images/color_plane.png) |
 
-*Screenshots from the PC test bench. Fonts are smaller on a real radio.*
+*Renders from the PC test bench. Fonts are smaller on a real radio.*
 
 ## Features
 
@@ -93,7 +99,9 @@ The radio menu is in French. Here is what each line means:
 
 ## Contributing
 
-Bug reports, ideas, videos and photos from real radios are welcome in the [issues](../../issues), and so are pull requests.
+Bug reports, ideas, videos and screenshots from real radios are welcome in the [issues](../../issues), and so are pull requests.
+
+To take a screenshot: in **MDL**, on the **Special Functions** page, assign **Screenshot** to a free switch. Each flip saves an image to the `SCREENSHOTS` folder on the SD card.
 
 ## License
 
