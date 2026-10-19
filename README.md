@@ -36,9 +36,9 @@
 | Taranis X9D+ 2019, EdgeTX 2.11 | ✅ Tested |
 | Other 212×64 radios (X9D, X9D+, X9E) | Should work: same screen |
 | EdgeTX color radios (TX16S…) | Supported, tested on the PC test bench |
-| 128×64 radios (QX7, X9 Lite, TX12, Zorro…) | Not tested |
+| 128×64 radios (QX7, X9 Lite, TX12, Zorro…) | Supported, tested on the PC test bench |
 
-Your radio needs the **SE**, **SF** and **SH** switches (see [Controls](#controls)).
+Your radio needs the **SF** and **SH** switches, plus **SE** or **SA** (see [Controls](#controls)).
 
 ## Install
 

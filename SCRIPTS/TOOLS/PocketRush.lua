@@ -34,6 +34,9 @@ local SML, INV, RGT, MID = SMLSIZE or 0, INVERS or 0, RIGHT or 0, MIDSIZE or 0
 local FONT = COLOR and 0 or SML                 -- police du HUD
 local TH = COLOR and 18 or 7                    -- hauteur d'une ligne de texte
 local RECFILE = "/SCRIPTS/TOOLS/PocketRush.rec"
+local MODESW = getValue("se") ~= nil and "se" or "sa"   -- pas de SE (Q X7...) : modes sur SA
+local MODESWN = string.upper(MODESW)
+local NARROW = W < 200                          -- ecrans 128x64
 
 -- couleurs : ecran couleur, ou 16 niveaux de gris (repli noir et blanc si GREY n'existe pas)
 local C = {}
@@ -641,13 +644,24 @@ local function drawMenu(now)
   if COLOR then
     local y0 = 2 + (#SETTINGS + 1) * TH
     local mx = 200 * set.rc / 10 / mmax(0.01, 1 - set.sup / 100)
-    lcd.drawText(4, y0, fmt("rotation max %d deg/s   SF armer   SE mode : haut ANGLE, milieu HORIZON, bas ACRO", floor(mx)), FONT + txt)
+    lcd.drawText(4, y0, fmt("rotation max %d deg/s   SF armer   %s mode : haut ANGLE, milieu HORIZON, bas ACRO", floor(mx), MODESWN), FONT + txt)
   end
   local help
-  if floor(now / 200) % 2 == 0 then
-    help = editing and "molette : regler   ENT : valider" or "molette : choisir   ENT : modifier"
+  local phase = floor(now / 200) % (NARROW and 3 or 2)
+  if phase == 0 then
+    if NARROW then
+      help = editing and "molette:regler ENT:valider" or "molette:choisir ENT:modifier"
+    else
+      help = editing and "molette : regler   ENT : valider" or "molette : choisir   ENT : modifier"
+    end
+  elseif COLOR then
+    help = "! modele SIMU (rien n'emet)  -  SH depart  -  avion/aile : gaz pour lancer"
+  elseif not NARROW then
+    help = fmt("SF arme %s mode SH depart !SIMU", MODESWN)
+  elseif phase == 1 then
+    help = fmt("SF arme  %s mode  SH depart", MODESWN)
   else
-    help = COLOR and "! modele SIMU (rien n'emet)  -  SH depart  -  avion/aile : gaz pour lancer" or "SF arme SE mode SH depart !SIMU"
+    help = "! modele SIMU : rien n'emet"
   end
   lcd.drawText(2, YMAX - TH + 1, help, FONT + txt)
 end
@@ -779,11 +793,11 @@ local function run(event)
   if screen == "menu" then return runMenu(event, now) end
   if keyExit(event) then screen = "menu"; return 0 end
 
-  -- interrupteurs : SH (ressort) recommence, SE choisit le mode, SF arme
+  -- interrupteurs : SH (ressort) recommence, SE (ou SA) choisit le mode, SF arme
   local sh = (getValue("sh") or 0) > 0
   if keyEnter(event) or (sh and not shPrev) then reset(now) end
   shPrev = sh
-  local se = getValue("se") or 0
+  local se = getValue(MODESW) or 0
   mode = (se < -500 and 2) or (se > 500 and 1) or 3
   local armSw = (getValue("sf") or 0) > 0
 

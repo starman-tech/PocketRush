@@ -36,9 +36,9 @@
 | Taranis X9D+ 2019, EdgeTX 2.11 | ✅ Testée |
 | Autres radios 212×64 (X9D, X9D+, X9E) | Devraient marcher : même écran |
 | Radios couleur EdgeTX (TX16S…) | Prises en charge, testées sur le banc d'essai PC |
-| Radios 128×64 (QX7, X9 Lite, TX12, Zorro…) | Pas testées |
+| Radios 128×64 (QX7, X9 Lite, TX12, Zorro…) | Prises en charge, testées sur le banc d'essai PC |
 
-Ta radio doit avoir les interrupteurs **SE**, **SF** et **SH** (voir [Commandes](#commandes)).
+Ta radio doit avoir les interrupteurs **SF** et **SH**, et **SE** ou **SA** (voir [Commandes](#commandes)).
 
 ## Installation
 
@@ -58,7 +58,7 @@ PocketRush lit tes **vrais manches et interrupteurs**. Avant de le lancer, **cho
 | **ENT** | Modifier, puis valider une valeur. Sur **> VOLER** : décoller | Recommencer |
 | **EXIT** | Annuler la modification, puis quitter | Revenir au menu |
 | **SF** | — | Armer / désarmer (gaz à zéro pour armer) |
-| **SE** | — | Mode : haut Angle / Stab, milieu Horizon, bas Acro / Manuel |
+| **SE** (**SA** sur les radios sans SE, comme la Q X7) | — | Mode : haut Angle / Stab, milieu Horizon, bas Acro / Manuel |
 | **SH** (ressort) | — | Revenir au départ |
 
 **Avion et aile :** une fois armé, mets plus de 30 % de gaz pour un lancement à la main.
